@@ -2,8 +2,6 @@
 
 A dynamic and responsive full-stack **Food Recipe Blog** built with **React**, **Node.js**, **Express**, and **MongoDB**. Users can view, add, edit, and delete recipes, as well as mark their favorite dishes. This app offers an engaging way to manage your culinary creations!
 
-![Food Blog Banner](./client/src/assets/foodRecipe.png)
-
 ## 🔗 Live Demo
 
 👉 Coming soon...  
@@ -28,7 +26,7 @@ A dynamic and responsive full-stack **Food Recipe Blog** built with **React**, *
 - React
 - Axios
 - React Router
-- Tailwind CSS / Custom CSS
+- Custom CSS
 
 **Backend:**
 - Node.js
@@ -43,22 +41,36 @@ A dynamic and responsive full-stack **Food Recipe Blog** built with **React**, *
 
 Food-Blog-Website/
 │
-├── client/ # React Frontend
-│ ├── src/
-│ │ ├── components/ # UI Components
-│ │ ├── pages/ # Pages like Home, AddRecipe, EditRecipe
-│ │ ├── assets/ # Images and static assets
-│ │ └── App.jsx # Root Component
-│ └── public/
+├── client/                       # React Frontend
+│   ├── public/                   # Static files (e.g., favicon, index.html)
+│   └── src/
+│       ├── assets/               # Images, icons, and static assets
+│       ├── components/           # Reusable UI components (e.g., Navbar, Card)
+│       ├── pages/                # Main pages (e.g., Home, AddRecipe, EditRecipe)
+│       ├── App.jsx               # Root component with route definitions
+│       ├── main.jsx              # ReactDOM render setup
+│       └── index.css             # Global CSS
 │
-├── server/ # Backend with Express
-│ ├── config/ # MongoDB connection
-│ ├── routes/ # User and Recipe routes
-│ ├── controllers/ # Logic handlers
-│ ├── models/ # Mongoose schemas
-│ └── server.js # Entry point
+├── server/                       # Backend
+│   ├── config/                   # MongoDB connection setup
+│   │   └── connectionDb.js
+│   ├── controllers/              # Controller functions for handling logic
+│   │   ├── recipeController.js
+│   │   └── userController.js
+│   ├── models/                   # Mongoose models/schemas
+│   │   ├── recipeModel.js
+│   │   └── userModel.js
+│   ├── routes/                   # Express routes
+│   │   ├── recipe.js
+│   │   └── user.js
+│   ├── public/                   # Uploaded images and static files
+│   └── server.js                 # Main server entry point
 │
-└── README.md # This file
+├── .gitignore                    # Ignored files and folders for Git
+├── README.md                     # Project documentation
+├── package.json                  # Backend dependencies and scripts
+└── client/package.json           # Frontend dependencies and scripts
+
 
 
 ---
